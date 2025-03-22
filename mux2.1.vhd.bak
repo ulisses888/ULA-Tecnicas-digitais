@@ -1,0 +1,19 @@
+LIBRARY IEEE;
+use IEEE.std_logic_1164.all;
+
+Entity mux IS
+PORT (
+
+a :in bit;
+b :in bit;
+c :in bit;
+s :out bit
+);
+
+end mux;
+architecture arq_mux of mux is
+begin
+
+s <= not (a and b) or (not (not c));
+
+end arq_mux;
